@@ -16,6 +16,7 @@ const app = express();
 
 app.use(express.json())
 app.use(express.json(urlencoded({extended: true})))
+app.use(cors());
 
 app.get('/api', (req, res) => {
     res.status(200).json({ message: 'Bonjour et bienevue sur notre API de reservation.'})
